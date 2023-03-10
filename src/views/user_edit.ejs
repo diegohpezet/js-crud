@@ -1,0 +1,23 @@
+<%- include('partials/_navbar') %>
+
+<div class="container mt-2">
+    <h1>Edit user</h1>
+    <form method="post" action="/update/<%= data.id %>">
+        <div class="row">
+          <div class="col-1">
+            <input type="text" name="id" class="form-control" value="<%= data.id %>" disabled readonly>
+          </div>
+          <div class="col">
+            <input type="text" name="username" class="form-control" value="<%= data.username %>">
+          </div>
+          <div class="col">
+            <input type="text" name="password" class="form-control" value="<%= data.password %>">
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary">Edit</button>
+          </div>
+        </div>
+      </form>
+</div>
+
+<%- include('partials/_footer') %>
